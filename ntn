@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ "$2" ]
+then
+	echo "$1: $2" >> ~/.local/share/notes
+elif [ "$1" ] 
+then
+	echo "$1" >> ~/.local/share/notes
+else
+	read -p "Title: " title
+	read -p "Description: " description
+
+	echo "$title: $description" >> ~/.local/share/notes
+fi
